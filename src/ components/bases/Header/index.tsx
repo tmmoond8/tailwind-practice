@@ -2,6 +2,7 @@ import React from 'react';
 import Logo from './logo.svg';
 import Search from './Search';
 import MenuGroup from './MenuGroup';
+import HeaderButton from './HeaderButton';
 
 interface Props {
   title?: string;
@@ -35,27 +36,33 @@ export default function Header({ title }: Props) {
           },
         ]}
       />
-      <MenuGroup menu="Drop" />
-      <MenuGroup menu="Stats" />
-      <MenuGroup menu="Community" />
-      <MenuGroup menu="Service" />
-      <MenuGroup
-        menu="Language"
-        subMenus={[
-          {
-            title: 'aaaa',
-            action: () => {
-              console.log('aaaa');
+      <ul className="flex flex-row">
+        <MenuGroup menu="Drop" />
+        <MenuGroup menu="Stats" />
+        <MenuGroup menu="Community" />
+        <MenuGroup menu="Service" />
+        <MenuGroup
+          menu="Language"
+          subMenus={[
+            {
+              title: 'aaaa',
+              action: () => {
+                console.log('aaaa');
+              },
             },
-          },
-          {
-            title: 'bbb',
-            action: () => {
-              console.log('bbb');
+            {
+              title: 'bbb',
+              action: () => {
+                console.log('bbb');
+              },
             },
-          },
-        ]}
-      />
+          ]}
+        />
+      </ul>
+      <div className="ml-12 flex flex-row">
+        <HeaderButton src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1648639192/noticon/h5eflxp7kdv7vyrhfbny.png" />
+        <HeaderButton src="https://noticon-static.tammolo.com/dgggcrkxq/image/upload/v1603679125/noticon/itvs5d1d3vzplxuysdtt.png" />
+      </div>
     </header>
   );
 }
