@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sliding-banner .flicking-pagination-bullet {
+  background-color: #f0eeee30;
+  width: 30px;
+  height: 4px;
+  border-radius: 2px;
+  transition: background-color 0.2s ease-in;
+}
+.sliding-banner .flicking-pagination-bullet-active {
+  background-color: white;
+}
